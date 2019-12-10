@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:signup_form_flutter/constants.dart';
 
-class RightContainer extends StatelessWidget {
+class RightContainer extends StatefulWidget {
+  @override
+  _RightContainerState createState() => _RightContainerState();
+}
+
+class _RightContainerState extends State<RightContainer> {
+  bool checked = true;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,7 +70,6 @@ class RightContainer extends StatelessWidget {
               obscureText: true,
               style: textFieldTextStyle,
               decoration: InputDecoration(
-                  // border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.vpn_key),
                   labelText: 'Password'),
             ),
@@ -82,6 +88,20 @@ class RightContainer extends StatelessWidget {
                 onPressed: () {},
                 child: Text('Login', style: loginButtonTextStyle,),
               ),
+            ],
+          ),
+          SizedBox(height: 8.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Checkbox(
+                activeColor: textColor,
+                value: checked,
+                onChanged: (bool value){
+                  checked = value;
+                },
+              ),
+              Text('By Signing up, you agree to Terms and Conditions and Privacy policy', style: helperTextStyle, textAlign: TextAlign.center,),
             ],
           )
         ],
