@@ -7,13 +7,10 @@ class LeftContainer extends StatelessWidget {
     return Container(
       color: bgColor,
       child: Center(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 50.0, bottom: 50.0),
-          child: Image(
-            image: AssetImage('images/group.png'),
-            // width: 800,
-            // height: 800,
-          ),
+        child: Image(
+          image: AssetImage('images/group.png'),
+          // width: 800,
+          // height: 800,
         ),
       ),
     );

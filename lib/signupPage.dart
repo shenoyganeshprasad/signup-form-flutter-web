@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signup_form_flutter/widgets/leftContainer.dart';
+import 'package:signup_form_flutter/widgets/rightContainer.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -12,7 +13,8 @@ class _SignupPageState extends State<SignupPage> {
     return Scaffold(
         body: Row(
       children: <Widget>[
-        LeftContainer(),
+        Expanded(child: LeftContainer()),
+        Expanded(child: RightContainer())
       ],
     ));
   }
