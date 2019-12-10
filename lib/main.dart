@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'signupPage.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Sign Up',
+      home: SignupPage(),
+    );
   }
 }
